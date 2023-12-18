@@ -1,17 +1,17 @@
-import Navigation from '../navigation';
-import Logo from '../logo';
-import ImageLinkForm from '../imagelinkform'
-import FaceRecognition from '../facerecognition';
+import Navigation from '../Navigation';
+import Logo from '../Logo';
+import ImageLinkForm from '../ImageLinkForm'
+import FaceRecognition from '../FaceRecognition';
 import useFaceDetection from '../../hooks/useFaceDetection';
 import ParticlesBg from 'particles-bg';
 
-function Home() {
+function Home({ onRouteChange }) {
   const { imgUrl, box, onInputChange, onButtonSubmit, handleInputClear } = useFaceDetection();
 
   return (
     <div className="h-screen w-full">
       <ParticlesBg type="cobweb" num={500} bg={true} className="z-0" interactive={true} />
-      <Navigation />
+      <Navigation onRouteChange={onRouteChange} />
       <Logo />
       <ImageLinkForm
         onButtonSubmit={onButtonSubmit}

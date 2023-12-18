@@ -1,10 +1,10 @@
 import React from "react";
 
-const Navigation = () => {
+const Navigation = ({ onRouteChange }) => {
     return (
         <nav style={{ display: 'flex', justifyContent: 'flex-end' }}>
             <div className="justify-center items-center bg-white rounded-md m-3 p-2">
-            <a href="#" className="text-red-500 p-3  ">Sing Out</a>
+                <a onClick={() => onRouteChange('SignIn')} href="#" className="text-red-500 p-3  ">Sign Out</a>
             </div>
         </nav>
     )
