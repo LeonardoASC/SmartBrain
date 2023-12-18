@@ -24,7 +24,7 @@ const ImageLinkForm = ({ onInputChange, onButtonSubmit, onInputClear }) => {
             <div className="flex flex-col gap-4 backdrop-blur-md p-4 rounded-full w-[75%]">
                 <p className="text-center text-5xl text-white">Magic Brain Detect</p>
                 <p className="text-center text-white">Put a link below to detect if there is a face in the photo</p>
-                <form onSubmit={handleSubmit} className="flex flex-col justify-center items-center gap-2 ">
+                <div onSubmit={handleSubmit} className="flex flex-col justify-center items-center gap-2 ">
                     <div className="flex items-center justify-center rounded-xl w-full gap-3 ">
                         <input
                             placeholder="Image Link"
@@ -52,7 +52,7 @@ const ImageLinkForm = ({ onInputChange, onButtonSubmit, onInputClear }) => {
                     >
                         Detect Now
                     </button>
-                </form>
+                </div>
             </div>
         </div>
     )
